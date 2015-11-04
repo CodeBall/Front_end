@@ -1,0 +1,22 @@
+.change	{
+    width: 300px;
+    height: 400px;
+    /* 底色 */
+    background-color: #000000;
+    /*不同的浏览器会有不同的样式写法*/
+
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(45deg,#000000,red,yellow,green,white);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#063053, #395873, #5c7c99);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#063053', endColorstr='#395873');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#063053', endColorstr='#395873')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#063053, #395873, #5c7c99);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#063053, #395873, #5c7c99);
+     /*标准写法 */
+    background-image: linear-gradient(45deg,#000000,red,yellow,green,white);
+}
