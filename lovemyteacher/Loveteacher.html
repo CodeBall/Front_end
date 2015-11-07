@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我爱我师</title>
+    <link rel="icon" href="/APP/Image/sdutxsh.png">
+    <link rel="stylesheet" href="css/loveteacher.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal-it.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/default.css"/>
+</head>
+<body onload="init();">
+<!--top-->
+<header class="top">
+    <div class="toubu">
+        <div class="logo">
+           <a href="{:U('Index/Index/index')}"> <img src="woaiwoshi/logo.png" width="450px" height="60px"/></a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li class="nav-fen">
+                    <a href="#">首　　页</a>
+                    <img src="woaiwoshi/shu.png" />
+                </li>
+                <li class="nav-fen">
+                    <a href="{:U('Index/Zhuanti/article_list',array('id'=>17))}">活动动态</a>
+                    <img src="woaiwoshi/shu.png" />
+                </li>
+                <li class="nav-fen">
+                    <a href="{:U('Index/Zhuanti/article_list',array('id'=>18))}">教师风采</a>
+                    <img src="woaiwoshi/shu.png" />
+                </li>
+                <li class="nav-fen">
+                    <a href="{:U('Index/Zhuanti/article_list',array('id'=>19))}">学院报道</a>
+                    <img src="woaiwoshi/shu.png" />
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="title_wei">
+        <div>
+            <canvas id="canvas1" width="700px" height="200px"></canvas>
+        </div>
+        <div class="box">
+            <p class="box1">__我心中最爱的老师</p>
+        </div>
+    </div>
+</header>
+<!--content/mid-->
+<content>
+    <div class="cont">
+        <div class="cont1">
+            <div class="cont1_jsfc">
+                <div class="title_jsfc"></div>
+                <div id="content_jsfc_top">
+                    <div id="cont_top_wc">
+                        <div id="ceng1">
+                            <span >
+                                <a href="#" onmousemove="document.getElementById('no1').style.display='block';"
+                                   onmouseout="document.getElementById('no1').style.display='none';">
+                                    <img src="woaiwoshi/1.jpg">
+                                    <p id="no1">第一个</p>
+                                </a>
+
+                                <a href="#" onmousemove="document.getElementById('no2').style.display='block';"
+                                   onmouseout="document.getElementById('no2').style.display='none';"><img src="woaiwoshi/tx11.jpg">
+                                    <p id="no2">第二个</p>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="#" onmousemove="document.getElementById('no3').style.display='block';"
+                                   onmouseout="document.getElementById('no3').style.display='none';"><img src="woaiwoshi/tx1.jpg">
+                                    <p id="no3">第三个</p>
+                                </a>
+                                <a href="#" onmousemove="document.getElementById('no4').style.display='block';"
+                                   onmouseout="document.getElementById('no4').style.display='none';"><img src="woaiwoshi/tx2.jpg">
+                                    <p id="no4">第三个</p>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="#" onmousemove="document.getElementById('no5').style.display='block';"
+                                   onmouseout="document.getElementById('no5').style.display='none';"><img src="woaiwoshi/tx3.jpg">
+                                    <p id="no5">第三个</p></a>
+                                <a href="#" onmousemove="document.getElementById('no6').style.display='block';"
+                                   onmouseout="document.getElementById('no6').style.display='none';"><img src="woaiwoshi/tx4.jpg">
+                                    <p id="no6">第三个</p>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="#" onmousemove="document.getElementById('no7').style.display='block';"
+                                   onmouseout="document.getElementById('no7').style.display='none';"><img src="woaiwoshi/tx5.jpg">
+                                    <p id="no7">第三个</p>
+                                </a>
+                                <a href="#" onmousemove="document.getElementById('no8').style.display='block';"
+                                   onmouseout="document.getElementById('no8').style.display='none';"><img src="woaiwoshi/tx6.jpg">
+                                    <p id="no8">第三个</p>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="#" onmousemove="document.getElementById('no9').style.display='block';"
+                                   onmouseout="document.getElementById('no9').style.display='none';"><img src="woaiwoshi/tx7.jpg">
+                                    <p id="no9">第三个</p>
+                                </a>
+                                <a href="#" onmousemove="document.getElementById('no10').style.display='block';"
+                                   onmouseout="document.getElementById('no10').style.display='none';"><img src="woaiwoshi/tx8.jpg">
+                                    <p id="no10">第三个</p>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="#" onmousemove="document.getElementById('no11').style.display='block';"
+                                   onmouseout="document.getElementById('no11').style.display='none';"><img src="woaiwoshi/tx11.jpg">
+                                    <p id="no11">第三个</p>
+                                </a>
+                                <a href="#" onmousemove="document.getElementById('no12').style.display='block';"
+                                   onmouseout="document.getElementById('no12').style.display='none';"><img src="woaiwoshi/tx12.jpg">
+                                    <p id="no12">第三个</p>
+                                </a>
+                            </span>
+                        </div>
+                        <div id="ceng2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont1_hdgg">
+                <div class="title_hdgg"></div>
+                <div class="content_hdgg">
+                    <ul>
+                        <volist name="dongtai" id="v" offset='0' length="10">
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                      <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动公告活动公告活动公告活动公告活动公告活动公告......</a>
+                                <span style="float: right;margin-right: 40px">15-11-03</span></li>
+                        </volist>
+                    </ul>
+                    <div class="more"><a href="#">more</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="cont2">
+            <div class="cont2_hddt">
+                <div class="title_hddt"></div>
+                <div class="cont2_hddt_top">
+                    <ul>
+                        <volist name="dongtai" id="v" offset='0' length="10">
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动动态活动动态活动动态活动.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动动态活动动态活动动态活动.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动动态活动动态活动动态活动.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动动态活动动态活动动态活动.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动动态活动动态活动动态活动.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动动态活动动态活动动态活动.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动动态活动动态活动动态活动.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动动态活动动态活动动态活动.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                活动动态活动动态活动动态活动.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                        </volist>
+                    </ul>
+                    <div class="more"><a href="#">more</a></div>
+                </div>
+            </div>
+            <div class="cont2_zwzs">
+                <div class="title_zwzs"></div>
+                <div class="cont2_zwzs_top">
+                    <ul>
+                        <volist name="dongtai" id="v" offset='0' length="10">
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                            <li><a class="title" href="{:U('Index/List/article_show',array('id'=>$v['id']))}">
+                                <img src="woaiwoshi/jt.png">
+                                征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示征文展示.......</a>
+                                <span style="float: right;margin-right: 40px">15-11-04</span></li>
+                        </volist>
+                    </ul>
+                    <div class="more"><a href="#">more</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="cont3">
+            <div class="cont3_hdjy">
+                <div class="title_hdjy"></div>
+                <div id="cont3_hdjy_top">
+                   <div id="cont3_top_wc">
+                       <div id="cont3_ceng1">
+                           <span><a href="#"><img src="woaiwoshi/hdjy1.jpg"></a></span>
+                           <span><a href="#"><img src="woaiwoshi/hdjy2.jpg"></a></span>
+                           <span><a href="#"><img src="woaiwoshi/hdjy3.jpg"></a></span>
+                           <span><a href="#"><img src="woaiwoshi/hdjy4.jpg"></a></span>
+                           <span><a href="#"><img src="woaiwoshi/hdjy1.jpg"></a></span>
+                           <span><a href="#"><img src="woaiwoshi/hdjy2.jpg"></a></span>
+                       </div>
+                       <div id="cont3_ceng2"></div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</content>
+<footer class="botto">
+</footer>
+
+<script>
+
+
+</script>
+
+<script type="text/javascript">
+    var image;
+    var intervalId1;
+    var intervalId2;
+    var intervalId3;
+    var drawW1 = 0;
+    var canvas;
+    var context;
+    var drawLeft;
+
+    var baiyechuangItemW ;
+    function init(){
+        image = new Image();
+        image.src="woaiwoshi/waws3.png";
+        canvas = document.getElementById("canvas1");
+        context = canvas.getContext("2d");
+        drawLeft = image.width/2;
+        clearInterval(intervalId1);
+        context.clearRect(0,0,image.width,image.height);
+        intervalId1 = setInterval("leftToRight();",10);
+    }
+    function leftToRight(){
+        context.drawImage(image,0,0,drawW1, image.height,0,0,drawW1,image.height);
+        drawW1 += 2;
+        if(drawW1>image.width){
+            drawW1 =0;
+            clearInterval(intervalId1);
+        }
+    }
+            var options1 = {
+                id: 'box1'
+            };
+            $('.box1').initReveal(options1);
+</script>
+<script>
+    var speed=25;
+    var demo=document.getElementById("content_jsfc_top");
+    var demo1=document.getElementById("ceng1");
+    var demo2=document.getElementById("ceng2");
+    demo2.innerHTML=demo1.innerHTML;
+    function marquee() {
+        if(demo2.offsetWidth-demo.scrollLeft<=0) {
+            demo.scrollLeft-=demo1.offsetWidth;
+        } else {
+            demo.scrollLeft++;
+        }
+    }
+    var MyMar=setInterval(marquee,speed);
+    demo.onmouseover=function() {
+        clearInterval(MyMar)
+    };
+    demo.onmouseout=function() {
+        MyMar=setInterval(marquee,speed)
+    };
+</script>
+<script>
+    var speed1=25;
+    var demo1=document.getElementById("cont3_hdjy_top");
+    var demo11=document.getElementById("cont3_ceng1");
+    var demo21=document.getElementById("cont3_ceng2");
+    demo21.innerHTML=demo11.innerHTML;
+    function marquee1() {
+        if(demo21.offsetWidth-demo1.scrollLeft<=0) {
+            demo1.scrollLeft-=demo11.offsetWidth;
+        } else {
+            demo1.scrollLeft++;
+        }
+    }
+    var MyMar1=setInterval(marquee1,speed1);
+    demo1.onmouseover=function() {
+        clearInterval(MyMar1)
+    };
+    demo1.onmouseout=function() {
+        MyMar1=setInterval(marquee1,speed1)
+    };
+</script>
+<script type="text/javascript" rel="stylesheet" src="js/jquery.min.js"></script>
+<script src="js/reveal-it.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

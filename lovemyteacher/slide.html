@@ -1,0 +1,77 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>slide</title>	
+	<style>
+		#demo {
+			width: 770px;
+			overflow: hidden;
+			height: 400px;
+			border: 2px solid yellow;
+		}
+		#indemo {
+			float: left;
+			width: 700%;
+		}
+		#demo1 {
+			float: left;
+		}
+		#demo2 {
+			float: left;
+		}
+		#demo #indemo span {
+			text-align: center;
+			height: 400px;
+			width: 300px;
+			margin-right: 5px;
+			padding: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			display: inline;
+			float: left;
+		}
+	
+	</style>
+
+	</head>
+	<body>
+		<div id="demo">
+			<div id="indemo">
+				<div id="demo1">
+					<span><a href="#"><img src="img/slide_1.jpg" width="300" height="200"/><img src="img/slide_1.jpg" width="300" height="200"/></a></span>
+					<span><a href="#"><img src="img/slide_2.jpg" width="300" height="200"/></a></span>
+					<span><a href="#"><img src="img/slide_3.jpg" width="300" height="200"/></a></span>
+					<span><a href="#"><img src="img/slide_4.jpg" width="300" height="200"/></a></span>
+					<span><a href="#"><img src="img/slide_5.jpg" width="300" height="200"/></a></span>
+				</div>
+				<div id="demo2"></div>
+			</div>
+		</div>
+
+
+	<script>
+		var speed=10;
+		var demo=document.getElementById("demo");
+		var demo1=document.getElementById("demo1");
+		var demo2=document.getElementById("demo2");
+		demo2.innerHTML=demo1.innerHTML;
+		function marquee() {
+			if(demo2.offsetWidth-demo.scrollLeft<=0) {
+				demo.scrollLeft-=demo1.offsetWidth;
+			} else {
+				demo.scrollLeft++;
+				}
+		}
+		var MyMar=setInterval(marquee,speed);
+		demo.onmouseover=function() {
+			clearInterval(MyMar)
+		};
+		demo.onmouseout=function() {
+			MyMar=setInterval(marquee,speed)
+		}; 
+
+	</script>
+	</body>
+	</html>
