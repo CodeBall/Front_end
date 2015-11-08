@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .div{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body onload="alert('页面加载完成')" onunload="mgs()">
+<form>
+    <!--异常的捕获-->
+<input id="txt" type="text">
+<input id="btn" type="button" onclick="demo()" value="提交">
+</form>
+<!--鼠标经过事件和鼠标移出事件-->
+<!--传递的this是指向当前函数-->
+<div class="div" onmouseout="onOut(this)" onmouseover="onOver(this)"></div>
+
+<form>
+    <input type="text" onchange="change(this)">
+    <input type="text" onselect="style.background = 'yellow' " onfocus="focuse(this)">
+</form>
+
+
+
+<!--javascript循环输出-->
+<script>
+    var i = [1,2,3,4,5,6];
+    for(var j in i){
+        document.write(i[j] + "<br/>");
+    }
+    var m = 1;
+    do{
+        document.write(m + " ");
+        m++;
+    }while(m < 10);
+</script>
+
+<script>
+    <!--鼠标经过事件和鼠标移出事件-->
+    function onOut(ooj){
+        ooj.innerHTML = "Word??";
+    }
+    function onOver(ooj){
+        ooj.innerHTML = "Hello!!";
+    }
+    //    <!--内容改变onchange方法的使用-->
+    function change(bg){
+        bg.style.background = "blue";
+        alert("输入框中内容改变了,所以背景颜色变了")
+    }
+    //    光标聚集事件
+    function focuse(oob){
+        oob.style.background = "red";
+    }
+    function mgs(){
+        alert("网页即将关闭");
+    }
+
+    <!--异常的捕获-->
+    function demo(){
+        try{
+            /*获取元素的值用value,注意没有括号*/
+            var e = document.getElementById('txt').value;
+            if(e == ""){
+                throw "输入的内容为空";
+            }
+        }catch (err){
+            alert(err);
+        }
+    }
+</script>
+</body>
+</html>
