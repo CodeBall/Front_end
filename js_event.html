@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--事件流描述的是页面中接受事件的顺序,总共有两种顺序,一种是事件冒泡,另一种是事件捕获
+事件冒泡:从最具体的元素接收,然后逐级向上传播,直到最不具体的元素(文档),
+以下示例中就是:从but接受,传到div,然后是html元素,然后是文档接收
+事件捕获:从最不具体的节点先接收,最具体的节点最后接收,和事件冒泡顺序相反-->
+
+<!--事件处理分为以下几种:
+(1)HTML事件处理(onclick的事件处理就属于HTML事件处理);优势是可以随时调用而不相互影响,
+劣势是如果调用函数更改,则需要改动多处
+(2)DOM0级事件处理:把一个函数赋值给一个事件处理程序属性;优势是只需要改动一处,劣势是如果触发同一个事件,
+比如两次onclick事件,则只执行最近的一处,之前的就会被覆盖
+(3)DOM2级事件处理:添加句柄(addEventListener("事件名","事件处理函数","布尔值"))和移除句柄(removeEventListener())
+都属于DOM2级事件处理,其中第三个参数布尔值如果为"true",则代表采用事件捕获,如果为"false",则代表采用事件冒泡.
+这个方法有一个优点就是可以同时添加多个事件,并且不会覆盖之前的事件
+(4)针对于IE8及其以下版本的浏览器,会支持attachEvent()方法和detachEvent()方法,其用法和DOM2级事件相似,
+-->
+
+<!--事件对象
+在触发DOM事件的时候会产生一个事件对象,该事件对象会产生许多属性和方法可供使用
+type:获取事件类型
+target:获取事件目标,即在哪里触发的事件
+stopPropagation():阻止事件冒泡,当某一个元素1被另一个元素2包含的时候,
+                   如果触发元素1的事件,而此时元素2也有触发的事件,则会自动触发元素2的事件,这种情况称为事件冒泡
+preventDefault():阻止事件默认行为-->
+
+<h1>根据浏览器版本的不同,可能会支持不同的事件处理</h1>
+
+<!--DOM0级事件处理:-->
+<div id="divid" style="width: 100px;height: 100px;background-color: yellow">
+    <button id="btn1">按钮</button>
+    <a id="aid" href="http://www.jikexueyuan.com">极客学院</a>
+</div>
+
+<script>
+    var btn1 = document.getElementById("btn1");
+    //  就不同的浏览器支持采取不同的事件处理方法
+    if(btn1.addEventListener){
+        btn1.addEventListener("mouseover",dome);
+    }
+    else if(btn1.attachEvent){
+        btn1.attachEvent("onclick",dome);
+    }
+    else{
+        btn1.onclick = dome();
+    }
+    btn1.onclick = function () {
+        alert("DOM0级事件处理");
+    }
+//    清除点击处理事件
+    btn1.onclick = null;
+//    注意:第一个参数时间名称要写正确,第二个参数写函数名的时候不要添加括号,否则都是错误!!!
+    btn1.addEventListener("click",dome);
+    function dome(event){
+        alert("该事件的类型是:" + event.type);
+        //在具体事件中调用阻止事件冒泡的方法,就会成功阻止上一级事件被触发
+        event.stopPropagation();
+    }
+
+    //    移除调用dome函数的事件
+    btn1.removeEventListener("click",dome);
+
+    document.getElementById("divid").addEventListener("click",dome2);
+    function dome2(){
+        alert("该事件的目标为:"+event.target);
+    }
+
+    document.getElementById("aid").addEventListener("click",stop);
+    function stop(event){
+        //首先阻止事件冒泡
+        event.stopPropagation();
+        //event.preventDefault();
+    }
+
+</script>
+</body>
+</html>
