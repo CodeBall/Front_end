@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--使用DOM操作HTML-->
+
+<p id="pid">Hello!!</p>
+<button onclick="demo()">按钮</button>
+<a id="lja" href="http://www.jikexueyuan.com">极客学院</a>
+<button onclick="shux()">点击切换超链接</button>
+<img id="imgm" src="lovemyteacher/woaiwoshi/tx1.jpg">
+<button onclick="img()">点击切换图片</button>
+
+
+<!--使用DOM操作CSS-->
+
+<div onclick="changeCss()" id="div" class="div">
+变色龙
+</div>
+<!--事件句柄的添加和移除-->
+
+<button id="btn">添加句柄</button>
+
+
+
+
+<!--使用DOM操作HTML-->
+<script>
+    function demo(){
+//        通过id找到元素
+        var nv = document.getElementById("pid");
+//        对元素内的值进行修改
+        nv.innerHTML = "World???";
+//        通过标签名称好到元素
+        var x = document.getElementsByTagName('p');//如果有多个相同的标签名,则选区第一个
+        alert(x);
+    }
+    //改变元素的属性,点后面直接写属性名及代表修改该属性内容
+    function shux(){
+        //获取到元素
+        var m = document.getElementById("lja");
+        m.innerHTML = "百度";
+        m.href = "http://www.baidu.com";
+    }
+    function img(){
+        document.getElementById("imgm").src = "lovemyteacher/woaiwoshi/tx2.jpg";
+    }
+</script>
+<!--使用DOM操作CSS-->
+<!--基本语法:document.getElementById("id").style.属性 = 新的样式;-->
+<script>
+    function changeCss(){
+        var f = document.getElementById("div");
+        f.style.background = "yellow";
+        f.style.width = "200px";
+        f.style.height = "200px";
+        f.style.color = "blue";
+    }
+</script>
+<!--DOM EventListener的使用,有两个方法:-->
+<!--addEventListener():用于向元素添加一个事件句柄,第一个参数指定是什么事件,第二个参数指定要做什么事情-->
+<!--removeEventListener():移除方法添加的句柄-->
+<script>
+//    可以对同一个id添加多个句柄事件,而且彼此之间不会相互影响
+    var x = document.getElementById("btn");
+    x.addEventListener("click",hello);
+    function hello(){
+        alert("Hello!!");
+    }
+    x.addEventListener("click",changeimg);
+//下面是移除句柄,移除之后就不会再产生效果了.
+    x.removeEventListener("click",changeimg);
+    function changeimg(){
+        var i = document.getElementById("imgm");
+        i.src = "lovemyteacher/woaiwoshi/tx3.jpg";
+    }
+</script>
+</body>
+</html>
