@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--Array数组对象
+常用方法:
+concat():合并数组
+sort():排序
+push():末尾追加元素,返回的是元素的个数
+reverse():数组元素翻转
+-->
+
+
+<!--Math对象
+该对象执行常见的算数任务
+常用方法:
+round():四舍五入的方法,保留的是整数部分
+random():或取随机数,获取从0到1的随机小数,可以根据某些运算进行区间的改变
+max():返回最大值
+min():返回最小值
+abs():返回绝对值
+
+-->
+
+
+<script>
+    function Sort(a,b){
+        return b-a;
+    }
+    var a = ["hello","world"];
+    var b = ["year","day"];
+    var c = a.concat(b);
+    var d = ["a","z","g","i","b"];
+    document.write(c + "<br/>");
+    //经测试,下面这一行的写法只适用于数字排序,sort对于字符串默认排序是升序
+    document.write(d.sort(function (a, b) {
+                return a-b;
+            }) + "<br/>");
+    document.write(b.push(a) + "<br/>");
+    document.write(b + "<br/>");
+    document.write(d.reverse());
+</script>
+
+<script>
+    document.write(Math.round(2.56) + "<br/>");
+    document.write(Math.round(2.5) + "<br/>");
+    document.write(Math.random()*10 + "<br/>");
+    document.write(parseInt(Math.random()*10) + "<br/>");
+    document.write(Math.max(10,20,89,23,46,7) + "<br/>");
+    document.write(Math.min(10,20,89,23,46,7) + "<br/>");
+    document.write(Math.abs(-2783) + "<br/>");
+</script>
+</body>
+</html>
