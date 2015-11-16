@@ -23,6 +23,7 @@ header .top{width:100%;height:50px;min-width:1080px;}
     height: 200px;
     margin-left: 280px;
     margin-top: 50px;
+    text-align: center;
 }
 .box{
     width: 300px;
@@ -56,7 +57,10 @@ header .top{width:100%;height:50px;min-width:1080px;}
     width: 100%;
     margin-top: 5px;
     height: 39px;
-    background: url("../woaiwoshi/jsfc.jpg");
+}
+.title_jsfc img{
+    width: 100%;
+    height: 100%;
 }
 #content_jsfc_top{
     border: 1px solid #FFC1C1;
@@ -124,7 +128,10 @@ header .top{width:100%;height:50px;min-width:1080px;}
     width: 100%;
     margin-top: 5px;
     height: 47px;
-    background: url("../woaiwoshi/hdgg.jpg");
+}
+.title_hdgg img{
+    width: 100%;
+    height: 100%;
 }
 .content_hdgg{
     border: 1px solid #FFC1C1;
@@ -151,7 +158,7 @@ header .top{width:100%;height:50px;min-width:1080px;}
 .cont2{
     clear: both;
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-color:#FAFAFA;
     margin-top: 20px;
 }
@@ -165,7 +172,10 @@ header .top{width:100%;height:50px;min-width:1080px;}
 .title_hddt{
     width: 100%;
     height: 48px;
-    background: url("../woaiwoshi/hddt.jpg");
+}
+.title_hddt img{
+    width: 100%;
+    height: 100%;
 }
 .cont2_hddt_top{
     border: 1px solid #FFC1C1;
@@ -175,7 +185,6 @@ header .top{width:100%;height:50px;min-width:1080px;}
     /*background-color: red;*/
 }
 .cont2_zwzs{
-
     float: left;
     width: 66%;
     height: 350px;
@@ -184,7 +193,10 @@ header .top{width:100%;height:50px;min-width:1080px;}
 .title_zwzs{
     width: 100%;
     height: 48px;
-    background: url("../woaiwoshi/zwzs.jpg");
+}
+.title_zwzs img{
+    width: 100%;
+    height: 100%;
 }
 .cont2_zwzs_top{
     border: 1px solid #FFC1C1;
