@@ -5,6 +5,137 @@
     <title></title>
 </head>
 <body>
+<!--DOM对象控制HTML方法详解
+    document.getElementsByName();   获取Name
+    document.getElementsByClassName();  获取元素
+    getAttribute();    获取元素属性
+    setAttribute();    设置元素属性
+    childNodes();  访问子节点
+    parentNode();  访问父节点
+    document.createElement();   创建元素节点
+    document.createTextNode();  创建文本节点
+    document.insertBefore();    插入节点
+    document.removeChild();     删除节点
+    document.documentElement.offsetWidth;    offsetWeight()    网页尺寸,不包含滚动条
+    document.scrollHeight();    scrollWeight()    网页尺寸,包含滚动条
+-->
+<p name="pid">Hello</p>
+<p name="pid">Hello</p>
+<p name="pid">Hello</p>
+<p name="pid">Hello</p>
+<h1>获取元素名称</h1>
+<h1>获取元素名称</h1>
+<h1>获取元素名称</h1>
+<a id="aid" title="这是a标签的title属性值" href="#">获取元素属性</a>
+<a id="aid2">设置元素属性</a>
+<ul><li>1</li><li>2</li><li>3</li></ul>
+<div id="divid">
+    <h4 id="hid">访问该节点的父节点</h4>
+</div>
+<script>
+    function getName(){
+//        获取name名
+        var count = document.getElementsByName("pid");
+//        通过输出可以得知count获取到的是name名为pid的元素集合,即以数组的形式存储的
+        alert(count.length);
+        var p = count[2];
+//        我们可以通过下标指定操作哪一个元素
+        p.innerHTML = "Word!!";
+    }
+    function getTagName(){
+        var count = document.getElementsByTagName("h1");
+//        通过输出可以得知count获取到的是name名为pid的元素集合,即以数组的形式存储的
+        alert(count.length);
+        var p = count[1];
+//        我们可以通过下标指定操作哪一个元素
+        p.innerHTML = "看来获取的正确";
+    }
+//    getName();
+//    getTagName();
+//    有以上运行状态来看,document.getElementsByName和 document.getElementsByTagName()是一样的
+//    获取属性方法
+    function getAttr(){
+//        要想获取属性,首先就要获取元素,明确了元素直呼在确定该元素的属性
+        var anode = document.getElementById('aid');
+        var attr = anode.getAttribute("title");
+        alert(attr);
+    }
+    function setAttr(){
+        var anode = document.getElementById("aid");
+        anode.setAttribute("title","这是设置之后的title属性值");
+        var attr = anode.getAttribute("title");
+        alert(attr);
+    }
+//    getAttr();
+//    setAttr();
 
+    function getChildNode(){
+        var node = document.getElementsByTagName("ul")[0].childNodes;
+//        这里判断的长度有时候和看到的li的个数不一致,那是因为ul之后的每一个空白处都算做一个元素,像上面这样写就是3
+        alert(node.length);
+//        可以查看一下第二个元素的节点类型,注意:节点类型可不是节电内的值
+        alert(node[1].nodeType);
+//        查看第二个元素的名称
+        alert(node[1].nodeName);
+    }
+    function getParentNode(){
+        var parent = document.getElementById("hid");
+        alert(parent.parentNode.nodeName + parent.parentNode.nodeType + parent.parentNode.nodeValue);
+    }
+//    getChildNode();
+//    getParentNode();
+    function createNode(){
+        //指定要添加元素的位置
+        var body = document.body;
+        //指定添加的元素
+        var input = document.createElement("input");
+        input.type = "button";
+        input.value = "按钮";
+        //将Input插入到到body中,这里是向末尾插入
+        body.appendChild(input);
+    }
+    function creatText(){
+        var body = document.body;
+        var text = document.createTextNode("textarea,this is a Text");
+        body.appendChild(text);
+    }
+//    createNode();
+//    creatText();
+    function addnode(){
+        var div = document.getElementById("divid");
+        var node = document.getElementById("hid");
+        var newnode = document.createElement("a");
+        newnode.href = "http://www.yanzl.net";
+        newnode.innerHTML = "挂在树上的兔子";
+        div.insertBefore(newnode,node);
+    }
+    function removeNode(){
+        var div = document.getElementById("divid");
+        var h = document.getElementById("hid");
+//        删除div下的某一项元素
+        var rm = div.removeChild(h);
+//        删除该元素下的第一个元素
+        var rm = div.removeChild(div.childNodes[1]);
+    }
+//    addnode()
+//    removeNode();
+    function getSize(){
+//        为了浏览器的兼容性,这里采取亦或
+        var weight = document.documentElement.offsetWidth || document.body.offsetWidth;
+        alert("宽度是:" + weight);
+        var Height = document.documentElement.offsetHeight || document.body.offsetHeight;
+        alert("高度是:" + Height);
+    }
+    function getSizesc(){
+//        为了浏览器的兼容性,这里采取亦或
+        var weight = document.documentElement.scrollWidth || document.body.scrollWidth;
+        alert("宽度是:" + weight);
+        var Height = document.documentElement.scrollHeight || document.body.scrollHeight;
+        alert("高度是:" + Height);
+    }
+    getSize();
+    getSizesc();
+//    如果没有滚动条,则两个函数执行的结果是相同的
+</script>
 </body>
 </html>
